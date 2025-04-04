@@ -97,8 +97,13 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: MyWpfApp  #MSIX Package
-        path: ./MyWPFApp.Package/AppPackages/ #${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
+      # create unique artifacts names across platform, runs
+        name: MyWpfApp-${{ matrix.targetplatform }}-${{ github.run_id }}
+        path: MyWPFApp.Package/AppPackages/
+        retention-days: 7  # Optional: auto-cleanup after 7 days
+
+        # name: MyWpfApp  #MSIX Package
+        # path: ./MyWPFApp.Package/AppPackages/ #${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
 
       
 
