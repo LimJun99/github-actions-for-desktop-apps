@@ -98,7 +98,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: MyWpfApp  #MSIX Package
-        path: MyWPFApp.Package/AppPackages/ #${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
+        path: ./MyWPFApp.Package/AppPackages/ #${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
 
       
 
