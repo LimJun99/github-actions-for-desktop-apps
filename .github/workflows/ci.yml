@@ -48,7 +48,7 @@ jobs:
 
     # Install the .NET Core workload
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v4  #actions/setup-dotnet@v3         **v3 out of service
+      uses: actions/setup-dotnet@v9  #actions/setup-dotnet@v3         **v3 out of service
       with:
         dotnet-version: '6.0.x'
 
@@ -99,5 +99,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4 #1
       with:
-        name: MSIX Package
-        path: ${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
+        name: MyWpfApp
+        path: MyWPFApp.Package/AppPackages #${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
