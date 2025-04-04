@@ -97,5 +97,8 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: MSIX Package #MyWpfApp
-        path: ${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }} #MyWPFApp.Package/AppPackages/
+        name: MyWpfApp  #MSIX Package
+        path: MyWPFApp.Package/AppPackages/ #${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}
+
+      
+
